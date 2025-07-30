@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="counter">count:0</h2>
+    <button id="startBtn">start</button>
+    <button id="stopBtn">stopBtn</button>
+    <button id="resetBtn">stop</button>
+    <script>
+        let count=0;
+        let intervalidId=null;
+        const maxcount=10
+        const counterDisplay=document.getElementById("startBtn")
+        // start the counter
+        document.getElementById("startBtn")
+        .addEventListener("click",()=>{
+            if(intervalidId===null)
+        {
+            intervalidId=setInterval(()=>{
+                count++;
+                document.getElementById("counter").innerText="count:"+count;
+                if(count>=maxcount)
+            {
+                clearInterval(intervalidId);
+            IntervalidId=null;
+            console.log("Reached max count.Interval stopped");
+
+            }
+            },1000,count);
+        }
+        });
+        //stop the counter
+        document.getElementById("stopBtn").addEventListener("click",()=>{
+            clearInterval(intervalidId);
+            clearIntervalidId=null;
+        });
+        //Reset Button
+        document.getElementById("resetBtn")
+        .addEventListener("click",()=>{
+            clearInterval(intervalidId);
+            intervalidId=null;
+            count=0;
+            counterd
+
+        })
+    </script>
+    
+</body>
+</html>

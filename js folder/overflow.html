@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript validation</h2>
+    <p>Enter a number and click OK:</p>
+    <input id="id1" type="number" max="100">
+    <button onclick="myfunction()">OK</button>
+    <p>If the number is greater then 100(the input  max attributes an error message will be decleared)</p>
+    <p id="demo"></p>
+
+    <script>
+        function myfunction(){
+            let text;
+            if(document.getElementByid("id1").validity.rangeoverflow){
+                text = "value to large";
+            } else{
+                text = "Input OK";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function using by string method</title>
+    <style>
+        body{font-family: 'Courier New', Courier, monospace;padding:20px;}
+        button{margin:5px;padding: 10px;}
+        #output{margin-top:20px;font-weight: bold;}
+    </style>
+</head>
+<body>
+    <h2> string method</h2>
+    <button onclick="stringToUppercase()">ToUpperCase</button>
+    <button onclick="stringToLowercase()">ToLowerCase</button>
+    <button onclick="stringsubstring()">Substring</button>
+    
+    <button onclick="stringReplace()">stringReplace</button>
+    <button onclick="stringsplit()">split</button>
+    <div id="ow c cw utput">output will be appear here</div>
+    <script>
+        let fruits=["apple","orange","pineapple"];
+        let sentence="Hai Wellcome here";
+        //string function
+        function stringLowerCase()
+        {
+            document.getElementById("output").innerHTML="ToLowercase"+sentencet.ToLowerCase();
+        }
+        function stringToUpperCase()
+        {
+            document.getElementById("output").innerHTML="ToUppercase"+sentencet.ToUpperCase();
+
+        }
+        function stringSubstring()
+        {
+            document.getElementById("output").innerHTML="Substring"+sentencet.substring(6,11);
+            
+
+        }
+        function stringReplace()
+        {
+            document.getElementById("output").innerHTML="replace"+sentencet.Replace("welcome","onboard");
+
+
+        }
+        function stringSplit()
+        {
+            document.getElementById("output").innerHTML="ToUppercase"+sentencet.split(" ");
+        }
+
+    </script>
+    
+</body>
+</html>

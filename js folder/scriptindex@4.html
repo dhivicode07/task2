@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check script at index 4</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 40px;
+            background-color: blueviolet;
+        }
+        input.button
+        {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        #result
+        {
+            margin-top: 20px;
+            font-weight: bold;
+            color: azure;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h2> Remove Script if it starts at index 4</h2>
+    <input type="text" id="inputstring" placeholder="Enter your string">
+    <button onclick="checkAndRemovescript()">Checkstring</button>
+    <div id="result"></div>
+
+
+<script>
+    function checkAndRemovescript()
+    {
+        const input=document.getElementById("inputstring").value;
+        const target="script";
+        const index=4;
+        let result;
+        if(input.substring(index,index+target.length)===target)
+    {
+        result=input.slice(0,index)+input.slice(index+target.length);
+    }
+    else
+    {
+        result=input;
+    }
+    document.getElementById("result").textContent="result:"+result;
+    }
+</script>
+</html>
